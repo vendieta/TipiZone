@@ -14,7 +14,7 @@ const CustomHeader: FC<{title: string; search?: boolean}> = ({
     <SafeAreaView>
       <View style={styles.flexRow}>
         <Pressable onPress={() => goBack()}>
-          <Icon name="chevron-back" color={Colors.text} size={RFValue(16)} />
+          <Icon name="chevron-back" color={Colors.text} size={RFValue(25)} />
         </Pressable>
         <CustomText
           style={styles.text}
@@ -25,7 +25,7 @@ const CustomHeader: FC<{title: string; search?: boolean}> = ({
 
         <View>
           {search && (
-            <Icon name="search" color={Colors.text} size={RFValue(16)} />
+            <Icon name="search" color={Colors.text} size={RFValue(25)} />
           )}
         </View>
       </View>
@@ -36,8 +36,10 @@ const CustomHeader: FC<{title: string; search?: boolean}> = ({
 const styles = StyleSheet.create({
   flexRow: {
     justifyContent: 'space-between',
-    padding: 10,
-    height: 60,
+    paddingTop: 25,
+    paddingBottom: 5,
+    paddingHorizontal:10,
+    height: 70,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'white',
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
+    fontSize: 20
   },
 });
 

@@ -10,13 +10,13 @@ const Content:FC = () => {
   return (
     <View style={styles.container}>
       <AdCarousal adData={adData} />
-      <CustomText variant='h5' fontFamily={Fonts.SemiBold}>Grocery & Kitchen</CustomText>
+      <CustomText variant='h5' fontFamily={Fonts.SemiBold}><Text>Grocery & Kitchen</Text></CustomText>
       <CategoryContainer data={categories} />
-      <CustomText variant='h5' fontFamily={Fonts.SemiBold}>Bestsellers</CustomText>
+      <CustomText variant='h5' fontFamily={Fonts.SemiBold}><Text>Bestsellers</Text></CustomText>
       <CategoryContainer data={categories} />
-      <CustomText variant='h5' fontFamily={Fonts.SemiBold}>Snacks & Drinks</CustomText>
+      <CustomText variant='h5' fontFamily={Fonts.SemiBold}><Text>Snacks & Drinks</Text></CustomText>
       <CategoryContainer data={categories} />
-      <CustomText variant='h5' fontFamily={Fonts.SemiBold}>Home & Lifestyle</CustomText>
+      <CustomText variant='h5' fontFamily={Fonts.SemiBold}><Text>Home & Lifestyle</Text></CustomText>
       <CategoryContainer data={categories} />
     </View>
   )

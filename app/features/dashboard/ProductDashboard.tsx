@@ -101,47 +101,54 @@ const ProductDashboard = () => {
               variant="h9"
               style={{color: 'white'}}
               fontFamily={Fonts.SemiBold}>
-              Back to top
+              <Text>
+                Back to top
+              </Text>
             </CustomText>
           </TouchableOpacity>
         </Animated.View>
 
-        <CollapsibleContainer style={[styles.panelContainer, { marginTop: insets.top || 20 }]}>
-          <CollapsibleHeaderContainer containerStyle={styles.transparent}>
-            <AnimatedHeader
-              showNotice={() => {
-                slideDown();
-                const timeoutId = setTimeout(() => {
-                  slideUp();
-                }, 3500);
-                return () => clearTimeout(timeoutId);
-              }}
-            />
-            <StickySearchBar />
-          </CollapsibleHeaderContainer>
-
-          <CollapsibleScrollView
-            nestedScrollEnabled
-            style={styles.panelContainer}
-            showsVerticalScrollIndicator={false}>
-            <Content />
-
-            <View style={{ backgroundColor: '#f8f8f8', padding: 20 }}>
-              <CustomText fontSize={RFValue(32)} fontFamily={Fonts.Bold} style={{ opacity: 0.2 }}>
-                Grocery Delivery App 🛒
-              </CustomText>
-              <CustomText fontFamily={Fonts.Bold} style={{ marginTop: 10, paddingBottom: 100, opacity: 0.2 }}>
-                Developed By ❤️ Ritik Prasad
-              </CustomText>
-            </View>
-          </CollapsibleScrollView>
-
-</CollapsibleContainer>
+        <CollapsibleContainer style={[{flex: 1}, { marginTop: insets.top || 20 }]}>
+          <View style={{flex: 1}}>
+            <CollapsibleHeaderContainer containerStyle={styles.transparent}>
+              <AnimatedHeader
+                showNotice={() => {
+                  slideDown();
+                  const timeoutId = setTimeout(() => {
+                    slideUp();
+                  }, 3500);
+                  return () => clearTimeout(timeoutId);
+                }}
+              />
+              <StickySearchBar />
+            </CollapsibleHeaderContainer>
+            
+            <CollapsibleScrollView
+              nestedScrollEnabled
+              style={styles.panelContainer}
+              showsVerticalScrollIndicator={false}>
+              <Content />
+            
+              <View style={{ backgroundColor: '#f8f8f8', padding: 20 }}>
+                <CustomText fontSize={RFValue(32)} fontFamily={Fonts.Bold} style={{ opacity: 0.2 }}>
+                  <Text>
+                    Grocery Delivery App 🛒
+                  </Text>
+                </CustomText>
+                <CustomText fontFamily={Fonts.Bold} style={{ marginTop: 10, paddingBottom: 100, opacity: 0.2 }}>
+                  <Text>
+                    Developed By ❤️ Ritik Prasad
+                  </Text>
+                </CustomText>
+              </View>
+            </CollapsibleScrollView>
+          </View>
+        </CollapsibleContainer>
 
       </>
     </NoticeAnimation>
   );
-};
+}; 
 
 const styles = StyleSheet.create({
   panelContainer: {

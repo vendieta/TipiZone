@@ -19,6 +19,7 @@ const ProductCategories = () => {
       try {
         setCategoriesLoading(true);
         const data = await getAllCategories();
+        console.log('estas son las categorias: ',data)
         setCategories(data);
         if (data && data?.length > 0) {
           setSelectedCategory(data[0]);
