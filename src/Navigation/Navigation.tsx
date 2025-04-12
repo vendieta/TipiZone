@@ -9,10 +9,10 @@ import ProductDashboard from '@/app/features/dashboard/ProductDashboard';
 import DeliveryDashboard from '@/app/features/delivery/DeliveryDashboard';
 import ProductCategories from '@/app/features/category/ProductCategories';
 import ProductOrder from '@/app/features/order/ProductOrder';
-// import OrderSuccess from '@features/order/OrderSuccess';
-// import LiveTracking from '@features/map/LiveTracking';
-// import Profile from '@features/profile/Profile';
-// import DeliveryMap from '@features/delivery/DeliveryMap';
+import OrderSuccess from '@/app/features/order/OrderSuccess';
+import LiveTracking from '@/app/features/map/LiveTracking';
+import Profile from '@/app/features/profile/Profile';
+import DeliveryMap from '@/app/features/delivery/DeliveryMap';
 
 const Stack = createNativeStackNavigator();
 const Navigation: FC = () => {
@@ -28,12 +28,10 @@ const Navigation: FC = () => {
         <Stack.Screen name="DeliveryDashboard" component={DeliveryDashboard} />
         <Stack.Screen name="ProductCategories" component={ProductCategories} /> 
         <Stack.Screen name="ProductOrder" component={ProductOrder} />
-        {/* 
         <Stack.Screen name="OrderSuccess" component={OrderSuccess} />
         <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="LiveTracking" component={LiveTracking} />
+        <Stack.Screen name="LiveTracking" component={LiveTracking} /> 
         <Stack.Screen name="DeliveryMap" component={DeliveryMap} />
-        */}
         <Stack.Screen
             options={{
                 animation: 'fade',
