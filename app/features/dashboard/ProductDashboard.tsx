@@ -121,9 +121,10 @@ const ProductDashboard = () => {
                     return () => clearTimeout(timeoutId);
                   }}
                 />
-              <StickySearchBar />
+                <StickySearchBar />
               </>
             </CollapsibleHeaderContainer>
+            
             
             <CollapsibleScrollView
               nestedScrollEnabled
@@ -157,8 +158,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   transparent: {
+    height: 150,
     backgroundColor: 'transparent',
-    height: screenHeight*0.20,
   },
   backToTopButton: {
     position: 'absolute',

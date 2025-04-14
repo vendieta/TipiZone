@@ -24,7 +24,8 @@ const StickySearchBar = () => {
 
 
   return (
-    <StickyView style={backgroundColorChanges}>
+    // <StickyView style={backgroundColorChanges}>
+    <StickyView style={{backgroundColor: 'red', height: 0, marginTop: 30}}>
       <>
         <SearchBar />
         <Animated.View style={[styles.shadow,animatedShadow]} />
