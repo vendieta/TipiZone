@@ -109,18 +109,20 @@ const ProductDashboard = () => {
         </Animated.View>
 
         <CollapsibleContainer style={[{flex: 1}, { marginTop: insets.top || 20 }]}>
-          <View style={{flex: 1}}>
+          <>
             <CollapsibleHeaderContainer containerStyle={styles.transparent}>
-              <AnimatedHeader
-                showNotice={() => {
-                  slideDown();
-                  const timeoutId = setTimeout(() => {
-                    slideUp();
-                  }, 3500);
-                  return () => clearTimeout(timeoutId);
-                }}
-              />
+              <>
+                <AnimatedHeader
+                  showNotice={() => {
+                    slideDown();
+                    const timeoutId = setTimeout(() => {
+                      slideUp();
+                    }, 3500);
+                    return () => clearTimeout(timeoutId);
+                  }}
+                />
               <StickySearchBar />
+              </>
             </CollapsibleHeaderContainer>
             
             <CollapsibleScrollView
@@ -142,7 +144,7 @@ const ProductDashboard = () => {
                 </CustomText>
               </View>
             </CollapsibleScrollView>
-          </View>
+          </>
         </CollapsibleContainer>
 
       </>
@@ -156,6 +158,7 @@ const styles = StyleSheet.create({
   },
   transparent: {
     backgroundColor: 'transparent',
+    height: screenHeight*0.20,
   },
   backToTopButton: {
     position: 'absolute',

@@ -10,7 +10,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {navigate} from '@/src/utils/NavigationUtils';
 
 const Header: FC<{showNotice: () => void}> = ({showNotice}) => {
-  const {setUser, user} = useAuthStore();
+  // const {setUser, user} = useAuthStore();
 
   // const updateUserLocation = async () => {
   //   Geolocation.requestAuthorization();
@@ -35,21 +35,27 @@ const Header: FC<{showNotice: () => void}> = ({showNotice}) => {
     <View style={styles.subContainer}>
       <TouchableOpacity activeOpacity={0.8}>
         <CustomText fontFamily={Fonts.Bold} variant="h8" style={styles.text}>
-          Delivery in
+          <Text>
+            Delivery in
+          </Text>
         </CustomText>
         <View style={styles.flexRowGap}>
           <CustomText
             fontFamily={Fonts.SemiBold}
             variant="h2"
             style={styles.text}>
-            15 minutes
+            <Text>
+              15 minutes
+            </Text>
           </CustomText>
           <TouchableOpacity style={styles.noticeBtn} onPress={showNotice}>
             <CustomText
               fontSize={RFValue(5)}
               fontFamily={Fonts.SemiBold}
               style={{color: '#3B4886'}}>
-              ⛈️ Rain
+              <Text>
+                ⛈️ Rain
+              </Text>
             </CustomText>
           </TouchableOpacity>
         </View>
@@ -60,7 +66,8 @@ const Header: FC<{showNotice: () => void}> = ({showNotice}) => {
             numberOfLines={1}
             fontFamily={Fonts.Medium}
             style={styles.text2}>
-            {user?.address || 'Knowhere, Somewhere 😅'}
+            <Text>Knowhere</Text>
+            {/* {user?.address || 'Knowhere, Somewhere 😅'} */}
           </CustomText>
           <Icon
             name="menu-down"
@@ -72,7 +79,7 @@ const Header: FC<{showNotice: () => void}> = ({showNotice}) => {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigate('Profile')}>
-        <Icon name="account-circle-outline" size={RFValue(36)} color="#fff" />
+        <Icon name="account-circle-outline" size={RFValue(35)} color="#fff" />
       </TouchableOpacity>
     </View>
   );

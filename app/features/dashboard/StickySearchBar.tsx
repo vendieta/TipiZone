@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import React from 'react'
 import { Colors } from '@/src/utils/Constants'
 import { StickyView, useCollapsibleContext } from '@r0b0t3d/react-native-collapsible'
 import Animated, { interpolate, useAnimatedStyle } from 'react-native-reanimated'
 import SearchBar from '@/components/dashboard/SearchBar'
+
 
 
 const StickySearchBar = () => {
@@ -24,8 +25,10 @@ const StickySearchBar = () => {
 
   return (
     <StickyView style={backgroundColorChanges}>
-      <SearchBar />
-      <Animated.View style={[styles.shadow,animatedShadow]} />
+      <>
+        <SearchBar />
+        <Animated.View style={[styles.shadow,animatedShadow]} />
+      </>
     </StickyView>
   )
 }
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
         height:15,
         width:'100%',
         borderBottomWidth:1,
-        borderBottomColor:Colors.border
+        borderBottomColor:Colors.border,
     }
 })
 

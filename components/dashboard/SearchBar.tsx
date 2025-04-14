@@ -1,10 +1,12 @@
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import React, {FC} from 'react';
+import {View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import React, { FC } from 'react';
 import {Colors, Fonts} from '@/src/utils/Constants';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {RFValue} from 'react-native-responsive-fontsize';
 import RollingBar from 'react-native-rolling-bar';
 import CustomText from '@/components/ui/CustomText';
+
+const { height, width } = Dimensions.get('screen')
 
 const SearchBar: FC = () => {
   return (
@@ -15,19 +17,29 @@ const SearchBar: FC = () => {
         defaultStyle={false}
         customStyle={styles.textContainer}>
         <CustomText variant="h6" fontFamily={Fonts.Medium}>
-          Search "sweets"
+          <Text>
+            Search "sweets"
+          </Text>
         </CustomText>
         <CustomText variant="h6" fontFamily={Fonts.Medium}>
-          Search "milk"
+          <Text>
+            Search "milk"
+          </Text>
         </CustomText>
         <CustomText variant="h6" fontFamily={Fonts.Medium}>
-          Search for ata, dal, coke
+          <Text>
+            Search for ata, dal, coke
+          </Text>
         </CustomText>
         <CustomText variant="h6" fontFamily={Fonts.Medium}>
-          Search "chips"
+          <Text>
+            Search "chips"
+          </Text>
         </CustomText>
         <CustomText variant="h6" fontFamily={Fonts.Medium}>
-          Search "pooja thali"
+          <Text>
+            Search "pooja thali"
+          </Text>
         </CustomText>
       </RollingBar>
 
@@ -52,9 +64,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginHorizontal: 10,
     paddingHorizontal: 10,
+    width: width-20,
+    bottom: -80,
   },
   textContainer: {
-    width: '90%',
+    width: '80%',
     paddingLeft: 10,
     height: 50,
   },
