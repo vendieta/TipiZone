@@ -35,7 +35,7 @@ const Sidebar: FC<SidebarProps> = ({
     let targetIndex = -1;
 
     categories?.forEach((category: any, index: number) => {
-      const isSelected = selectedCategory?._id === category?._id;
+      const isSelected = selectedCategory?.category_id === category?.category_id;
       animatedValues[index].value = withTiming(isSelected ? 2 : -15, {
         duration: 500,
       });
@@ -80,11 +80,12 @@ const Sidebar: FC<SidebarProps> = ({
                 <View
                   style={[
                     styles.imageContainer,
-                    selectedCategory.id === category?._id &&
+                    selectedCategory.category_id === category?.category_id &&
                       styles.selectedImageContainer,
                   ]}>
                   <Animated.Image
                     source={{uri: category?.image}}
+                    // source={category ? require(`../../assets/category/${category.image}.png`) : null}
                     style={[styles.image, animatedStyle]}
                   />
                 </View>
@@ -125,7 +126,8 @@ const styles = StyleSheet.create({
     height: 80,
     top: 10,
     alignSelf: 'center',
-    backgroundColor: Colors.secondary,
+    // backgroundColor: Colors.secondary,
+    backgroundColor: 'red',
     borderTopLeftRadius: 15,
     borderBottomLeftRadius: 15,
   },
