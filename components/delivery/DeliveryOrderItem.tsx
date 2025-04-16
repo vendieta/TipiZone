@@ -8,9 +8,11 @@ import {navigate} from '@/src/utils/NavigationUtils';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 interface CartItem {
+  name: string;
   _id: string | number;
   item: any;
-  count: number;
+  price: number;
+  // count: number;
 }
 
 interface Order {
@@ -57,9 +59,10 @@ const DeliveryOrderItem: FC<{item: Order; index: number}> = ({item, index}) => {
 
       <View style={styles.itemsContainer}>
         {item.items.slice(0, 2).map((i, idx) => {
+          console.log(i)
           return (
             <CustomText variant="h8" numberOfLines={1} key={idx}>
-              {i.count}x {i.item.name}
+              {i.item.price}x {i.item.name}
             </CustomText>
           );
         })}
