@@ -13,6 +13,7 @@ import OrderSuccess from '@/app/features/order/OrderSuccess';
 import LiveTracking from '@/app/features/map/LiveTracking';
 import Profile from '@/app/features/profile/Profile';
 import DeliveryMap from '@/app/features/delivery/DeliveryMap';
+import HomeLogin from '@/app/features/homeLogin/HomeLogin';
 
 const Stack = createNativeStackNavigator();
 const Navigation: FC = () => {
@@ -38,6 +39,13 @@ const Navigation: FC = () => {
             }}
             name="DeliveryLogin"
             component={DeliveryLogin}
+        />
+        <Stack.Screen
+            options={{
+                animation: 'fade',
+            }}
+            name="HomeLogin"
+            component={HomeLogin}
         />
         <Stack.Screen
           options={{

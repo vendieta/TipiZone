@@ -63,7 +63,7 @@ const SplashScreen: FC = () => {
             return true;
         }
         // resetAndNavigate('CustomerLogin');
-        resetAndNavigate('ProductDashboard');
+        resetAndNavigate('HomeLogin');
         return false;
     };
     useEffect(() => {
