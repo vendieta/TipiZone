@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Image, Dimensions } from "react-native";
 import FloatMenu from "@/components/general/FloatMenu";
+import Button from "@/components/general/button";
 
 const { height , width } = Dimensions.get('screen')
 
@@ -22,7 +23,25 @@ export default function HomeLogin(){
                 <View style={styles.subContainer}>
                     <Text style={styles.title}>Únete como Zoners</Text>
                     <Text style={styles.text}>Donde los deliveries locales hacen historia</Text>
-
+                    <Button data={{
+                        text: '¿Eres Zonners?',
+                        styleView: {
+                            backgroundColor: '#141744',
+                            width: '80%',
+                        },
+                        styleText: {
+                            
+                        }
+                    }}/>
+                    
+                    <Text> o <Text/>
+                    <Button data={{
+                        text: '¿Eres Shopper?',
+                        styleView: {
+                            backgroundColor: 'blue',
+                            width: '80%',   
+                        }
+                    }}/>
                 </View>
             </FloatMenu>
         </View>
