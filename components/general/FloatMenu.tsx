@@ -18,7 +18,7 @@ export default function FloatMenu({children}: Props) {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        paddingTop: 10,
+        paddingVertical: 20,
         backgroundColor: '#FFFFFF',
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
