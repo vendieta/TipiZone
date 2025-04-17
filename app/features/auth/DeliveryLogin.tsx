@@ -30,9 +30,9 @@ export default function DeleveryLogin() {
                     resizeMode="contain"
                 />
             </TouchableOpacity>
-            <FloatMenu>
+            <FloatMenu ViewStyle={tab === 'form' ? { height: '80%' } : undefined}>
                 {
-                    tab === 'tabs' ? <TabsLogin/> : <RegisterForm/>
+                    tab === 'tabs' ? <TabsLogin setData={setTab}/> : <RegisterForm/>
                 }
             </FloatMenu>
         </View>

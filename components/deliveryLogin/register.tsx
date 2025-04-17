@@ -2,13 +2,13 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-nativ
 import { useState } from "react";
 import { Ionicons } from '@expo/vector-icons';
 
+
 interface Props {
-    controler: void
+    setData: React.Dispatch<React.SetStateAction<string>>;
 }
 
 
-
-export default function Register (control: Props) {
+export default function Register ({ setData }: Props) {
     const [genero, setGenero] = useState<'' | 'Femenino' | 'Masculino' | 'Otro'>('');
     const [fechaNacimiento, setFechaNacimiento] = useState('');
 
@@ -67,10 +67,9 @@ export default function Register (control: Props) {
                     ))}
                 </View>
 
-                {/* <ButtonNav
-                    text="Continuar"
-                    routeName={}
-                /> */}
+                <TouchableOpacity style={styles.button} onPress={() => setData('form')}>
+                    <Text style={styles.buttonText}>Continuar</Text>
+                </TouchableOpacity>
 
         </View>
     )

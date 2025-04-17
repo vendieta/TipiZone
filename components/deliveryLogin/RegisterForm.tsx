@@ -1,25 +1,23 @@
-import { ScrollView, TouchableOpacity, Text, Image, StyleSheet } from "react-native";
-
+import { View, ScrollView, TouchableOpacity, Text, Image, StyleSheet, TextInput, TouchableWithoutFeedback, Pressable, Dimensions } from "react-native";
+import { useEffect, useState } from "react";
+import DocPersonal from "@/app/features/auth/DocPesonal";
+import InfoTrans from "@/app/features/auth/InfoTrans";
 
 
 export default function RegisterForm() {
 
+    // docP = documentos personales
+    const [ controler, setControler ] = useState('docP')
+
     return(
-        <ScrollView>
-            <Text>Documentos personales</Text>
-            <TouchableOpacity style={styles.rectangleView}>
-                <Text>Cédula por ambos lados</Text>
-            </TouchableOpacity>
-            <Text>Información adicional</Text>
-        </ScrollView>
+        <View style={{height: '100%'}}>
+            {
+                controler === 'docP' ? <DocPersonal setData={setControler}/> : <InfoTrans/>
+            }
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    rectangleView: {
-        borderRadius: 5,
-        backgroundColor: "#fff",
-        borderStyle: "solid",
-        borderColor: "#dad9e5",
-    }
+    
 })

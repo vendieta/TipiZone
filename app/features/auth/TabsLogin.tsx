@@ -3,11 +3,13 @@ import { useState } from "react";
 import Login from "@/components/deliveryLogin/login";
 import Register from "@/components/deliveryLogin/register";
 
+
 interface Props {
-    controler: void
+    setData: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function TabsLogin() {
+
+export default function TabsLogin({ setData }: Props) {
     const [tab, setTab] = useState('login');
 
     return(
@@ -21,7 +23,7 @@ export default function TabsLogin() {
                 </TouchableOpacity>
                 </View>
                     {
-                        tab === 'login' ? <Login/> : <Register/>
+                        tab === 'login' ? <Login/> : <Register setData={setData}/>
                     }
         </View>
     )

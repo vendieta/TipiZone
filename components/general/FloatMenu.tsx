@@ -1,15 +1,16 @@
 import { ReactNode } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, ViewStyle } from "react-native";
 
 
 interface Props {
     children: ReactNode,
+    ViewStyle?: ViewStyle | null | undefined
 }
 
-export default function FloatMenu({children}: Props) {
+export default function FloatMenu({children, ViewStyle}: Props) {
 
     return(
-        <View style={styles.container}>
+        <View style={[styles.container, ViewStyle]}>
             {children}
         </View>
     )
