@@ -38,7 +38,7 @@ export default function HomeLogin(){
                     
                     <Text style={styles.text}> o </Text>
 
-                    <Button 
+                    <Button
                         routeName= 'DeliveryLogin'
                         text= '¿Eres Zonners?'
                         styleView={{
