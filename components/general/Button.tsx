@@ -9,7 +9,7 @@ interface Props {
 export default function ButtonNav({ text, styleView, styleText }: Props) {
 
     return(
-        <TouchableOpacity style={[styles.container, styleView]} onPress={}>
+        <TouchableOpacity style={[styles.container, styleView]} >
             <Text style={[styles.text,styleText]}>
                 {text}
             </Text>

@@ -15,6 +15,11 @@ export default function state() {
 
 const styles = StyleSheet.create({
     container: {
-        
+        width: 100,
+        borderRadius: 10,
+        backgroundColor: "#fff",
+        paddingVertical: 5,
+        paddingHorizontal: 20,
+        alignItems: "center",
     }
 })

@@ -1,3 +1,4 @@
+import { resetAndNavigate } from "@/src/utils/NavigationUtils";
 import { useState } from "react"
 import { View, Text, TouchableOpacity, Image, StyleSheet, TextInput } from "react-native"
 
@@ -68,7 +69,7 @@ export default function InfoTrans () {
                     onChangeText={setSeguro}
                 />
             </View>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => resetAndNavigate('DeliveryDashboard')}>
                 <Text style={styles.buttonText}>Continuar</Text>
             </TouchableOpacity>
         </View>
