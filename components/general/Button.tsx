@@ -6,7 +6,7 @@ interface Props {
     styleView?: ViewStyle;
     styleText?: TextStyle;
 }
-export default function ButtonNav({ text, styleView, styleText }: Props) {
+export default function Button({ text, styleView, styleText }: Props) {
 
     return(
         <TouchableOpacity style={[styles.container, styleView]} >

@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, DimensionValue, ViewStyle, TextStyle, TouchableOpacity } from "react-native";
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from "@react-navigation/native";
+import { navigate } from "@/src/utils/NavigationUtils";
 
 // Define tus rutas (ajusta según tu navegación)
 type RootStackParamList = {
@@ -17,7 +18,7 @@ export default function ButtonNav({ text, styleView, styleText, routeName }: Pro
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
     return(
-        <TouchableOpacity style={[styles.container, styleView]} onPress={() => navigation.navigate(routeName)}>
+        <TouchableOpacity style={[styles.container, styleView]} onPress={() => navigate(routeName)}>
             <Text style={[styles.text,styleText]}>
                 {text}
             </Text>
