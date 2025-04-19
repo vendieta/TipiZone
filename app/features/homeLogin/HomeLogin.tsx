@@ -40,7 +40,7 @@ export default function HomeLogin(){
 
                     <Button
                         routeName= 'DeliveryLogin'
-                        text= '¿Eres Zonners?'
+                        text= '¿Eres Shopper?'
                         styleView={{
                             backgroundColor: '#FF391F',
                             width: '80%',

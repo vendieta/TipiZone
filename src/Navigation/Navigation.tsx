@@ -15,6 +15,8 @@ import Profile from '@/app/features/profile/Profile';
 import DeliveryMap from '@/app/features/delivery/DeliveryMap';
 import HomeLogin from '@/app/features/homeLogin/HomeLogin';
 import Map from '@/app/features/map/Mapa';
+import Detail from '@/app/features/order/Detail';
+
 
 const Stack = createNativeStackNavigator();
 const Navigation: FC = () => {
@@ -35,6 +37,7 @@ const Navigation: FC = () => {
         <Stack.Screen name="LiveTracking" component={LiveTracking} /> 
         <Stack.Screen name="DeliveryMap" component={DeliveryMap} />
         <Stack.Screen name="Mapa" component={Map} />
+        <Stack.Screen name="Detail" component={Detail} />
         <Stack.Screen
             options={{
                 animation: 'fade',
